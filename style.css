@@ -9,7 +9,7 @@ body
     overflow-wrap: break-word;
 }
 
-.container
+a.container
 {
     width: 1000px;
     margin: 16px auto;
@@ -23,7 +23,6 @@ body
     font-weight: 550;
     letter-spacing: 2px;
     color: #fbfbfb;
-    width: 982px;
     height: auto;
     padding-left: 16px;
     padding-top: 16px;
@@ -66,7 +65,7 @@ nav ul
 nav li
 {
     display: inline;
-    margin-right: 70px;
+    margin-right: 50px;
     margin-bottom: 15px;
 }
 
@@ -164,7 +163,6 @@ footer
     li
     {
         display: inline-block;
-        margin-right: 80px;
+        margin-right: 50px;
     }
 }
-
