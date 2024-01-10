@@ -31,6 +31,12 @@ body
     border: 1px solid #dc7474;
 }
 
+img
+{
+    max-width: 100%;
+    height: auto;
+}
+
 a
 {
     text-decoration: none;
