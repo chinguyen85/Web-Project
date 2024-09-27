@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporting - Step 3</title>
+    <link rel="stylesheet" href="report_step3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for icons -->
+</head>
+
+<body>
+    <!--header-->
+    <div class="navbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="/src/learn.html">Learn</a></li>
+            <li><a href="/src/status_map.html">Status map</a></li>
+            <li><a href="/src/report.html" class="active">Reporting</a></li>
+        </ul>
+        <div class="user-icon">
+            <img src="/Images/user_app_basic_icon.png" />
+        </div>
+    </div>
+
+    <!--main-->
+    <div class="container">
+        <div class="input-box">
+            <div class="cat-options">
+                <button id="fullbin" class="option-button" onclick="selectOption(this)">Full bins <i class="fas fa-arrow-right"></i></button>
+                <button id="cleanliness" class="option-button" onclick="selectOption(this)">Cleanliness <i class="fas fa-arrow-right"></i></button>
+                <button id="misssortedwaste" class="option-button" onclick="selectOption(this)">Miss sorted waste <i class="fas fa-arrow-right"></i></button>
+                <button id="labelsnotvisible" class="option-button" onclick="selectOption(this)">Labels not visible <i class="fas fa-arrow-right"></i></button>
+            </div>
+
+            <div class="dynamic-content">
+                <div id="messageBox" class="message-box">
+                    <h3 id="dynamicHeading">Please select a category on the left to input issue details</h3>
+                </div>
+                <div id="contentContainer" style="display: none;">
+                    <div class="upload-title">Take photos via camera or browse gallery to upload</div>
+                    <div class="upload-column">
+                        <div class="upload-buttons">
+                            <label class="upload-button">
+                                <i class="fas fa-camera"></i>
+                                <input type="file" accept="image/*" capture="camera" style="display: none;" />
+                            </label>
+                            <label class="upload-button">
+                                <i class="fas fa-image"></i>
+                                <input type="file" accept="image/*" style="display: none;" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="text-content">
+                        <textarea rows="5" maxlength="1000" placeholder="Describe the issue here..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action">
+            <div class="previous-button">
+                <img src="/Images/left_arrow_icon.png" alt="Previous" />
+            </div>
+            <div class="finish-next">
+                <a class="next-button" href="report_step4.html">
+                    <img src="/Images/right_arrow_icon.png" alt="Next" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer">
+        Footer
+    </div>
+
+    <script>
+        function selectOption(selectedButton) {
+            const buttons = document.querySelectorAll('.option-button');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+                button.querySelector('i').classList.replace('fa-arrow-left', 'fa-arrow-right');
+            });
+            selectedButton.classList.add('active');
+            selectedButton.querySelector('i').classList.replace('fa-arrow-right', 'fa-arrow-left');
+            
+            const selectedOptionText = selectedButton.textContent.trim();
+
+            document.getElementById('dynamicHeading').textContent = `Selected Option: ${selectedOptionText}`;
+            document.getElementById('contentContainer').style.display = 'block';
+            document.getElementById('messageBox').classList.add('selected');
+            //console.log('Selected option:', selectedOptionText);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporting - Step 4</title>
+    <link rel="stylesheet" href="/style-step4.css">
+</head>
+
+<body>
+    <!--header-->
+    <div class="navbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="/src/learn.html">Learn</a></li>
+            <li><a href="/src/status_map.html">Status map</a></li>
+            <li><a href="/src/report.html" class="active">Reporting</a></li>
+        </ul>
+        <div class="user-icon">
+            <img src="/Images/user_app_basic_icon.png" />
+        </div>
+    </div>
+
+    <!--main-->
+    <div class="container">
+        <div class="input-box">
+            <h3>Send the report</h3>
+            <div class="main-text">How would you like to submit this report?</div>
+            <ul class="options">
+                <li>
+                    <div class="radio-option">
+                        <input type="radio" id="registered" name="report" value="registered">
+                        <label for="registered">As a registered user</label>
+                    </div>
+                    <div class="description">
+                        <p>Your username will be publicly visible and your address will be shared with the receiving organization.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="radio-option">
+                        <input type="radio" id="anonymous" name="report" value="anonymous">
+                        <label for="anonymous">As an anonymous</label>
+                    </div>
+                    <div class="description">
+                        <p>No account required. This request will be sent to the receiving organization but you will not receive updates.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="radio-option">
+                        <input type="radio" id="hide" name="report" value="hide">
+                        <label for="hide">Hide your personal information</label>
+                    </div>
+                    <div class="description">
+                        <p>Your username and address will not be public and will be hidden from the receiving organization.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="action">
+                <a class="previous-button" href="report_step3.html">
+                    <img src="/Images/left_arrow_icon.png" alt="Previous" />
+                </a>
+                <a class="finish-next" href="report_step3.html">
+                    <div class="finish-text">FINISH</div>
+                    <div class="next-button">
+                        <img src="/Images/right_arrow_icon.png" alt="Next" />
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer">
+        Footer
+    </div>
+</body>
+</html>
